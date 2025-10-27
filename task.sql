@@ -10,7 +10,7 @@ BEGIN
         Products.Name
     FROM Products
     INNER JOIN ProductInventory ON Products.ID = ProductInventory.ProductID
-    INNER JOIN Warehouse ON Warehouse.ID = ProductInventory.WarehouseID
-    WHERE Warehouse.ID=WarehouseFilter;
+    INNER JOIN Warehouses ON Warehouses.ID = ProductInventory.WarehouseID
+    WHERE Warehouses.ID=WarehouseFilter;
 END //
 DELIMITER ;
